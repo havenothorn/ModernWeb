@@ -1,0 +1,118 @@
+/* graph & bar 기본값 */
+.graph {
+  width: 620px;
+  border: 5px solid #000;
+}
+
+.bar {
+  width: 10px;
+  height: 50px;
+  background-color: orange;
+  margin: 5px;
+  transition-duration: 2s;
+}
+
+/* transition-timing-function */
+
+#graph-01:hover > .bar {
+  width: 600px;
+}
+
+#graph-01 > .bar:nth-child(1) {
+  transition-timing-function: linear;
+}
+#graph-01 > .bar:nth-child(2) {
+  transition-timing-function: ease;
+}
+#graph-01 > .bar:nth-child(3) {
+  transition-timing-function: ease-in;
+}
+#graph-01 > .bar:nth-child(4) {
+  transition-timing-function: ease-in-out;
+}
+#graph-01 > .bar:nth-child(5) {
+  transition-timing-function: ease-out;
+}
+
+/* transition-property */
+#graph-02:hover > .bar:nth-child(1) {
+  background-color: red;
+  width: 100px;
+}
+#graph-02:hover > .bar:nth-child(2) {
+  background-color: blue;
+  width: 300px;
+}
+#graph-02:hover > .bar:nth-child(3) {
+  background-color: green;
+  width: 400px;
+}
+#graph-02:hover > .bar:nth-child(4) {
+  background-color: yellow;
+  width: 200px;
+}
+#graph-02:hover > .bar:nth-child(5) {
+  background-color: pink;
+  width: 400px;
+}
+#graph-02 > .bar {
+  /* transition-property: background-color, width; */
+  /* transition-duration: 1s, 2s; */
+  transition: background-color 1s ease, width 2s linear 1s;
+}
+
+/* keyframe & animation */
+#box-container {
+  position: relative;
+  height: 700px;
+}
+.box {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  text-align: center;
+  background: linear-gradient(#cb60b3 0%, #f0f089 100%);
+}
+.box > p {
+  line-height: 200px;
+}
+
+#box-01 {
+  animation-name: rint;
+  animation-duration: 2s;
+  /* animation-iteration-count: infinite; */
+  animation-timing-function: linear;
+}
+
+@keyframes rint {
+  from {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    left: 500px;
+  }
+  to {
+    left: 500px;
+    transform: rotate(360deg);
+  }
+}
+
+#box-02 {
+  margin-top: 250px;
+  animation-name: rint;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+#box-03 {
+  margin-top: 500px;
+  animation: rint 3s linear none infinite alternate;
+}
+
+#box-03:hover {
+  animation-play-state: paused;
+}
