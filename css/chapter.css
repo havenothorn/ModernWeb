@@ -347,3 +347,50 @@
 .item:nth-child(6) {
   transform: rotateY(300deg) translateZ(-200px);
 }
+/* 정적 그리드 시스템 */
+
+/* 스타일 사용 */
+#grid-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background-color: blanchedalmond;
+}
+#grid-container > h2 {
+  padding: 30px;
+  font-size: 1.1em;
+}
+#grid-container ~ footer > .footer_text {
+  width: 100%;
+}
+.row {
+  overflow: hidden;
+}
+[class*='grid_'] {
+  margin: 0 1% 1% 0;
+  float: left;
+  background-color: rgb(246, 200, 230);
+}
+.row > div:first-child {
+  margin-left: 1%;
+}
+.grid_2 {
+  width: 15.5%;
+  height: 100px;
+}
+.grid_3 {
+  width: 23.75%;
+  height: 100px;
+}
+.grid_4 {
+  width: 32%;
+  height: 100px;
+}
+.grid_6 {
+  width: 48.5%;
+  height: 100px;
+}
+.grid_12 {
+  width: 98%;
+  height: 100px;
+}
