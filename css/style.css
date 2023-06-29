@@ -27,13 +27,14 @@
 
 #main_header > #gnb {
   background-color: aquamarine;
-  width: 760px;
+  width: 100%;
   height: 30px;
   margin-top: 30px;
 }
 
 #main_header > #gnb > ul {
   display: flex;
+  justify-content: center;
 }
 
 #main_header > #gnb > ul > li {
@@ -55,7 +56,7 @@
 /* main */
 
 #container {
-  width: 760px;
+  width: 100%;
   height: auto;
   padding: 30px;
   background-color: blanchedalmond;
@@ -73,7 +74,7 @@
 
 /* footer */
 footer > .footer_text {
-  width: 760px;
+  width: 100%;
   background-color: rgb(240, 175, 132);
   color: #fff;
   text-align: center;
